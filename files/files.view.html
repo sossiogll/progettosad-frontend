@@ -1,0 +1,11 @@
+
+<h3>Files attualmente caricati per
+<br><h4>{{vm.category.name}}</h4></h3>
+<ul class="files-list">
+    <li ng-repeat="file in vm.files">
+        <a href="#!/files" ng-click="vm.downloadFiles(files.uuid, file.fileName ,file.extension)">{{file.fileName}}.{{file.extension}}</a><br><p class="files-date">Data Caricamento: <b>{{file.created_at}}</b></p>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#!/" class="btn-back">torna indietro</a></p>
+

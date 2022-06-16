@@ -1,0 +1,26 @@
+<div class=" col-xs-12 col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 ">
+    <div class="row">
+        <h2 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Accedi all’area affiliati</h2>
+        <a href="#!/register" class="btn-reg col-xs-12 col-sm-12 col-md-12 col-lg-12">Sei nuovo da queste parti? Registrati</a>
+    </div>
+
+    <form name="form" ng-submit="vm.login()" role="form">
+        <div class="form-group row" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username" class="label-form  col-xs-12 col-sm-12 col-md-12 col-lg-12">Email</label>
+            <input type="text" name="username" id="username" class="form-input  col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-model="vm.username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block col-xs-12 col-sm-12 col-md-12 col-lg-12">L'username è richiesto.</span>
+        </div>
+        <div class="form-group row" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password" class="label-form  col-xs-12 col-sm-12 col-md-12 col-lg-12">Password</label>
+            <input type="password" name="password" id="password" class="form-input col- col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-model="vm.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block col-xs-12 col-sm-12 col-md-12 col-lg-12">La password è richiesta.</span>
+        </div>
+        <div class="form-act row">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn-yellow col-xs-12 col-sm-12 col-md-12 col-lg-12" data-action='submit'>Login</button>
+            <img width="20" ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+
+            <a href="#!/passwordReset" class="btn-attiva col-sm-12">Attiva account o reset password</a>
+
+        </div>
+    </form>
+</div>

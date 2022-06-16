@@ -1,0 +1,14 @@
+﻿<h2>Salve, {{vm.user.name}}!</h2>
+
+<h3>Files attualmente caricati:</h3>
+<ul>
+    <li ng-repeat="category in vm.allCategories" class="titolo-file">
+        {{category.name}}
+        <br><a href="#!/{{category.name}}/files" ng-click="vm.showCategory(category.id)" class="link-files">Visualizza Files</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<div class = "home-bottom-area">
+<a href="#!/login" ng-click="vm.logout()"><button type="button" class="btn-logout">Logout</button></a>
+<a href="#!/changePassword" class="change-password">Cambia password</a>
+</div>
